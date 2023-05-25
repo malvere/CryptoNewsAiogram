@@ -56,7 +56,6 @@ def main() -> None:
         async def scheduled_task():
             await send_info(dp)
 
-        scheduler.start()
         scheduler.add_job(
             func=scheduled_task,
             trigger="cron",
