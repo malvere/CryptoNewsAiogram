@@ -26,6 +26,7 @@ async def main() -> None:
             trigger="cron",
             hour="8-20",
         )
+
         await bot.delete_webhook()
         await bot.get_updates()
         await dp.start_polling(
