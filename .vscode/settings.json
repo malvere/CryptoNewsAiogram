@@ -1,0 +1,37 @@
+{
+    // "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "none",
+    "python.formatting.blackArgs": [
+      "--line-length", "120",
+    ],
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "[json]": {
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.suggest.insertMode": "replace"
+    },
+    "isort.args":["--profile", "black"],
+    "python.linting.flake8Args": [
+      "--max-line-length=100",
+      "--ignore=E402,F841,F401,E302,E305",
+  ],
+    "material-icon-theme.folders.associations": {
+    "customFolderName": "callback",
+    "sample": "mjml"
+  },
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+  }
+  

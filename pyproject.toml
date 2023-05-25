@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "cryptochannelbot"
+version = "0.1.0"
+description = ""
+authors = ["Malvere <gatling1404@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = "^2.25.1"
+apscheduler = "^3.10.1"
+sqlalchemy = "^2.0.13"
+asyncpg = "^0.27.0"
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.0"
+black = "^23.3.0"
+ipykernel = "^6.23.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
