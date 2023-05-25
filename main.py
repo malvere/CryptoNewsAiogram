@@ -8,6 +8,7 @@ from aiogram.utils.executor import start_webhook
 import commands
 import envars as env
 from misc.scheduler import scheduler
+from misc.send_info import send_info
 
 
 # Main function
@@ -51,6 +52,17 @@ def main() -> None:
                 ],
             )
             logging.warning("Set new webhook url")
+
+        async def scheduled_task():
+            await send_info(dp)
+
+        scheduler.start()
+        scheduler.add_job(
+            func=scheduled_task,
+            trigger="cron",
+            hour="8-20",
+            id="main",
+        )
 
     async def on_shutdown(self):
         """
