@@ -59,7 +59,7 @@ def main() -> None:
         scheduler.add_job(
             func=scheduled_task,
             trigger="cron",
-            hour="8-20",
+            hour="8,20",
             id="main",
         )
 
